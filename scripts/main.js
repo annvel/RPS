@@ -1,6 +1,6 @@
 // computer randomly returns "Rock", "Paper" or "Scissors"
 
-function getComputerChoice(rpsStringArray) {
+function getComputerChoice(rpsStringArray = []) {
 
     // select random item from the array
     const rpsRandomItem = Math.floor(Math.random() * rpsStringArray.length);
