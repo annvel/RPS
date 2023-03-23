@@ -23,41 +23,39 @@ parameters are case-insensitive
 - scissors beats paper
 */
 function playRound(playerSelection, computerSelection) {
-    console.log("USER CHOICE: Rock");
-    
-    if(typeof playerSelection !== "string") {
+    console.log("USER CHOICE: " + playerSelection);
+    if(typeof playerSelection !== "string") { 
+    //if(!["Rock", "Paper", "Scissors"].includes(playerSelection)) 
         return "Enter something valid, for example, Rock, Paper or Scissors!" 
     } else {
-        if(playerSelection === "rock") {
+        if(playerSelection == "rock") {
             if(computerSelection == "Rock") {
                 return "Draw! Try again";
-            } else if(computerSelection == "Scissors") {
-                return "You Lose! Rock beats Scissors";
             } else if(computerSelection == "Paper") {
-                return "You win! Paper beats Rock";
+                return `You Lose! ${computerSelection} beats ${playerSelection}`;
+            } else if(computerSelection == "Scissors") {
+                return `You win ${playerSelection} beats ${computerSelection}`;
             }
-        }  else if(playerSelection === "paper") {
+        }  else if(playerSelection == "paper") {
             if(computerSelection == "Paper") {
                 return "Draw! Try again";
             } else if(computerSelection == "Scissors") {
-                return "You Lose! Scissors beats Paper";
+                return `You Lose! ${computerSelection} beats ${playerSelection}`;
             } else if(computerSelection == "Rock") {
-                return "You win! Paper beats Rock";
+                return `You win ${playerSelection} beats ${computerSelection}`;
             }
-        } else if(playerSelection === "Scissors") {
+        } else {
             if(computerSelection == "Scissors") {
                 return "Draw! Try again";
             }else if(computerSelection == "Rock") {
-                return "You Lose! Scissors beats Rock";
+                return `You Lose! ${computerSelection} beats ${playerSelection}`;
             } else if(computerSelection == "Paper") {
-                return "You win! Scissors beats Paper";
+                return `You win ${playerSelection} beats ${computerSelection}`;
             }
         }
-        /*else {
-            return `You win ${playerSelection} beats ${computerSelection}`;
-        }*/
     }
 }
+
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
