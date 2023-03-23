@@ -3,6 +3,15 @@ function: getComputerChoice
 randomly returns a component of the game; ie, rock, paper or scissors
 */
 
+function getComputerChoice() {
+    const rpsArr = ["Rock", "Paper", "Scissors"];
+    rpsArrIndex = Math.floor(Math.random() * rpsArr.length);
+    rpsArrItem = rpsArr[rpsArrIndex];
+    return rpsArrItem;
+}
+getComputerChoice()
+console.log(getComputerChoice());
+
 
 /*
 function: playRound(playerSelection, computerSelection)
