@@ -5,8 +5,8 @@ randomly returns a component of the game; ie, rock, paper or scissors
 
 function getComputerChoice() {
     const rpsArr = ["Rock", "Paper", "Scissors"];
-    rpsArrIndex = Math.floor(Math.random() * rpsArr.length);
-    rpsArrItem = rpsArr[rpsArrIndex];
+    const rpsArrIndex = Math.floor(Math.random() * rpsArr.length);
+    const rpsArrItem = rpsArr[rpsArrIndex];
     return rpsArrItem;
 }
 getComputerChoice();
